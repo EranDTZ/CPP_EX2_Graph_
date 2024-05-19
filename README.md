@@ -31,6 +31,28 @@ This project was made to implements a Graph class and various graph algorithms i
 - `std::vector<std::vector<int>> getAdjMatrix() const`: Returns the entire adjacency matrix.
 - `bool getDirected() const`: Returns whether the graph is directed or not.
 
+### Operators
+
+- `Graph operator+(const Graph& other) const`: Merges two graphs by adding their adjacency matrices.
+- `Graph& operator+=(const Graph& other)`: Merges two graphs by adding their adjacency matrices and updating the current graph.
+- `Graph operator+() const`: Returns a copy of the graph.
+- `Graph operator-(const Graph& other) const`: Subtracts the adjacency matrix of another graph from the current graph.
+- `Graph& operator-=(const Graph& other)`: Subtracts the adjacency matrix of another graph from the current graph.
+- `Graph operator-() const`: Returns the complement of the graph.
+- `Graph operator++() const`: Prefix increment operator.
+- `Graph operator--() const`: Prefix decrement operator.
+- `Graph operator*(int k) const`: Multiplies the adjacency matrix by a scalar.
+- `Graph operator/(int k) const`: Divides the adjacency matrix by a scalar.
+- `Graph operator*(const Graph& other) const`: Multiplies the adjacency matrices of two graphs.
+- `friend std::ostream& operator<<(std::ostream& os, const Graph& graph)`: Prints the adjacency matrix representing the graph.
+- `bool operator==(const Graph& other) const`: Checks if two graphs are equal.
+- `bool operator!=(const Graph& other) const`: Checks if two graphs are not equal.
+- `bool operator>=(const Graph& other) const`: Checks if the current graph is greater than or equal to another graph.
+- `bool operator<=(const Graph& other) const`: Checks if the current graph is less than or equal to another graph.
+- `bool operator>(const Graph& other) const`: Checks if the current graph is greater than another graph.
+- `bool operator<(const Graph& other) const`: Checks if the current graph is less than another graph.
+
+
 ## Algorithms Class
 
 ### Methods
