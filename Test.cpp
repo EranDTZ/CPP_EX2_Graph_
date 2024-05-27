@@ -101,7 +101,6 @@ TEST_CASE("Test graph subtraction - Identity element") {
 }
 
 TEST_CASE("Test graph scalar multiplication - Identity element") {
-    // נבדוק את פעולת הכפלה כאשר מכפילים את הגרף באחד (תוצאה צריכה להיות זהה לגרף המקורי)
     Graph g1;
     vector<vector<int>> graph = {
         {0, 1, 0},
@@ -111,12 +110,10 @@ TEST_CASE("Test graph scalar multiplication - Identity element") {
 
     Graph result = g1 * 1;
 
-    // אמורים לקבל את הגרף המקורי, כיוון שכפל באחד אינו משנה את הערכים
     REQUIRE(result.getAdjMatrix() == g1.getAdjMatrix());
 }
 
 TEST_CASE("Test graph equality operator - Same graph") {
-    // נבדוק את פעולת אופרטור השוואה כאשר הגרפים זהים
     Graph g1;
     vector<vector<int>> graph = {
         {0, 1, 0},
@@ -127,12 +124,10 @@ TEST_CASE("Test graph equality operator - Same graph") {
     Graph g2;
     g2.loadGraph(graph);
 
-    // אמורים לקבל את התוצאה true, מאחר והגרפים זהים
     REQUIRE(g1 == g2);
 }
 
 TEST_CASE("Test graph inequality operator - Different graph") {
-    // נבדוק את פעולת אופרטור השוואה כאשר הגרפים שונים
     Graph g1;
     vector<vector<int>> graph1 = {
         {0, 1, 0},
@@ -147,7 +142,6 @@ TEST_CASE("Test graph inequality operator - Different graph") {
         {0, 1, 0}};
     g2.loadGraph(graph2);
 
-    // אמורים לקבל את התוצאה false, מאחר והגרפים שונים
     REQUIRE_FALSE(g1 == g2);
 }
 
